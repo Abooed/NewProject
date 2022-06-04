@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('title')
-    Update Task Data
+    Update product Data
 @endsection
 @section('content')
 <style>
@@ -18,27 +18,27 @@
         font-size: x-large;
     }
 </style>
-{{-- @if (isset($task)) --}}
+{{-- @if (isset($product)) --}}
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">Task Id</th>
-            <th scope="col">Task Name</th>
-            <th scope="col">Task Description</th>
+            <th scope="col">product Id</th>
+            <th scope="col">product Name</th>
+            <th scope="col">product Description</th>
             <th scope="col">Created At</th>
             <th scope="col">Updated At</th>
         </tr>
     </thead>
-    {{-- @isset($task)
-    <form action="{{ route('update',[$task->id]) }}" method="POST">
+    {{-- @isset($product)
+    <form action="{{ route('update',[$product->id]) }}" method="POST">
         @method('PUT')
         <tbody>
             <tr>
-                <th scope="row">{{ $task->id }} </th>
-                <td>@csrf<input type="text" name="name" value="{{ $task->name }}"></td>
-                <td>@csrf<textarea name="description" rows="4" cols="50">{{ $task->description }}</textarea></td>
-                <td>{{ $task->created_at }}</td>
-                <td>{{ $task->updated_at }}</td>
+                <th scope="row">{{ $product->id }} </th>
+                <td>@csrf<input type="text" name="name" value="{{ $product->name }}"></td>
+                <td>@csrf<textarea name="description" rows="4" cols="50">{{ $product->description }}</textarea></td>
+                <td>{{ $product->created_at }}</td>
+                <td>{{ $product->updated_at }}</td>
                 <td>
                     <button type="submit" class="btn btn-success">
                         Save
@@ -49,15 +49,15 @@
     </form>
     @endisset --}}
 
-    <form action="{{ route('update',[$task->id]) }}" method="POST">
+    <form action="{{ route('update',[$product->id]) }}" method="POST">
         @method('PUT')
         <tbody>
             <tr>
-                <th scope="row">{{ $task->id }} </th>
-                <td>@csrf<input type="text" name="name" value="{{ $task->name }}"></td>
-                <td>@csrf<textarea name="description" rows="4" cols="50">{{ $task->description }}</textarea></td>
-                <td>{{ $task->created_at }}</td>
-                <td>{{ $task->updated_at }}</td>
+                <th scope="row">{{ $product->id }} </th>
+                <td>@csrf<input type="text" name="name" value="{{ $product->name }}"></td>
+                <td>@csrf<textarea name="description" rows="4" cols="50">{{ $product->description }}</textarea></td>
+                <td>{{ $product->created_at }}</td>
+                <td>{{ $product->updated_at }}</td>
                 <td>
                     <button type="submit" class="btn btn-success">
                         Save
